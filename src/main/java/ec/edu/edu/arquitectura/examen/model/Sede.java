@@ -13,7 +13,7 @@ import jakarta.persistence.TemporalType;
 import jakarta.persistence.Version;
 
 @Entity
-@Table(name = "OFI_EDIFICIO")
+@Table(name = "OFI_SEDE")
 public class Sede {
     @Id
     @Column(name = "COD_SEDE", length = 8, nullable = false)

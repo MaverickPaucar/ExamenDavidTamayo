@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 import jakarta.persistence.Version;
 
 @Entity
-@Table(name = "EDIFICIO")
+@Table(name = "OFI_EDIFICIO")
 public class Edificio {
     @EmbeddedId
     private EdificioPK pk;
