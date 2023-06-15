@@ -20,10 +20,10 @@ public class Edificio {
     private String nombre;
     @Column(name = "PISO", nullable = false)
     private Integer piso;
-    @Column(name = "SUPERFICE", precision = 7, scale = 2, nullable = false)
+    @Column(name = "SUPERFICIE", precision = 7, scale = 2, nullable = false)
     private BigDecimal superfice;
     @Version
-    @Column(name = "version", nullable = false)
+    @Column(name = "VERSION", nullable = false)
     private Long version;
 
     @ManyToOne
