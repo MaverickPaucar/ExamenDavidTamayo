@@ -1,6 +1,7 @@
 package ec.edu.edu.arquitectura.examen.service;
 
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
@@ -18,6 +19,11 @@ public class SedeService {
         this.sedeRepository = sedeRepository;
     }
     
+public List<Sede> obtainByCodigoSede(Integer codigo){
+    return this.sedeRepository.findByCodigoInstitucion(codigo);
+}
+
+
 @Transactional
 public Sede create(Sede sede){
     Optional<Sede> sedeOpt = this.sedeRepository.findById(sede.getCodigo());
