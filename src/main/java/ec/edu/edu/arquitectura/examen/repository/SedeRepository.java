@@ -10,6 +10,7 @@ import ec.edu.edu.arquitectura.examen.model.Sede;
 @Repository
 public interface SedeRepository extends JpaRepository<Sede, String> {
     List<Sede> findByCodigoInstitucion(Integer codigo);
+    Sede findByNombre(String nombre);
 
     Sede findByEsPrincipal(Boolean esPrincipal);
 }
