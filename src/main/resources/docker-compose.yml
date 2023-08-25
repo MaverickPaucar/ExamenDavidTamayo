@@ -1,0 +1,29 @@
+version: '3'
+services:
+  postgres-test:
+    image: postgres:latest
+    container_name: postgres-test
+    environment:
+      POSTGRES_PASSWORD: David20rafaemma
+    ports:
+      - 5434:5432
+  testapp-postgres:
+    image: testapp-postgres:0.1
+    depends_on:
+      - postgres-test
+    container_name: testapp-postgres
+    environment:
+      - SERVER_PORT=9003
+    ports:
+      - 9003:9003
+    build:  .
+  testapp-postgres-2:
+    image: testapp-postgres:0.2
+    depends_on:
+      - postgres-test
+    container_name: testapp-postgres-2
+    environment:
+      - SERVER_PORT=9004
+    ports:
+      - 9004:9004
+    build: .
